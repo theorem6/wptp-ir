@@ -1,0 +1,13 @@
+{
+  "openapi": "3.0.3",
+  "info": { "title": "Petstore Mini", "version": "1.0.0" },
+  "paths": {
+    "/pets": {
+      "get": { "operationId": "listPets", "summary": "List pets" },
+      "post": { "operationId": "createPet", "summary": "Create pet" }
+    },
+    "/pets/{id}": {
+      "get": { "operationId": "getPet", "summary": "Get pet by id" }
+    }
+  }
+}

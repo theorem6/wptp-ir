@@ -10,7 +10,7 @@ describe("IR v0 → WebIR bundle export", () => {
   it("round-trips minimal-route with zero losses", () => {
     const bundlePath = join(root, "fixtures", "webir", "minimal-route.webir.bundle.json");
     const imported = importWebIrBundleJson(JSON.parse(readFileSync(bundlePath, "utf8")));
-    const exported = exportIrToWebIrBundleV0(imported);
+    const exported = exportIrToWebIrBundleV0(imported, { synthesizeRouteHandlers: false });
     const roundTrip = importWebIrBundleJson(exported);
     expect(roundTrip.losses).toEqual([]);
     expect(roundTrip.nodes.length).toBe(imported.nodes.length);
