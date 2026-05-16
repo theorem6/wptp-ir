@@ -31,6 +31,10 @@ npm install
 npm test
 ```
 
+**Flagship:** `fixtures/webir/tiny-blog.webir.bundle.json` is exported from Chrysalis
+(`packages/ingest/tests/golden/tiny-blog.webir.json` via `export-webir-bundle.mjs`).
+Import yields **325** nodes and **zero** losses (see `fixtures/reports/tiny-blog-loss.md`).
+
 Import a fixture bundle:
 
 ```bash
