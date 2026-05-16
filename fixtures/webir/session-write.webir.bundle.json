@@ -1,0 +1,43 @@
+{
+  "format": "chrysalis.webir.bundle",
+  "bundleVersion": "1.0.0",
+  "module": {
+    "meta": { "sourceApp": "f-session", "createdAt": "1970-01-01T00:00:00.000Z", "chrysalisVersion": "test" },
+    "roots": ["s0"],
+    "nodes": [
+      {
+        "id": "s0",
+        "dialect": "effect",
+        "op": "session.set",
+        "type": { "kind": "void" },
+        "effects": [{ "kind": "session.write" }],
+        "operands": ["k0", "v0"],
+        "attrs": {},
+        "origin": { "kind": "php", "file": "s.php", "line": 1, "col": 1 },
+        "provenance": [{ "source": "php-ast", "reason": "session", "locator": { "kind": "php", "file": "s.php", "line": 1, "col": 1 } }]
+      },
+      {
+        "id": "k0",
+        "dialect": "data",
+        "op": "literal",
+        "type": { "kind": "string" },
+        "effects": [],
+        "operands": [],
+        "attrs": { "value": "user_id" },
+        "origin": { "kind": "php", "file": "s.php", "line": 1, "col": 1 },
+        "provenance": [{ "source": "php-ast", "reason": "key", "locator": { "kind": "php", "file": "s.php", "line": 1, "col": 1 } }]
+      },
+      {
+        "id": "v0",
+        "dialect": "data",
+        "op": "literal",
+        "type": { "kind": "int" },
+        "effects": [],
+        "operands": [],
+        "attrs": { "value": 42 },
+        "origin": { "kind": "php", "file": "s.php", "line": 1, "col": 1 },
+        "provenance": [{ "source": "php-ast", "reason": "val", "locator": { "kind": "php", "file": "s.php", "line": 1, "col": 1 } }]
+      }
+    ]
+  }
+}

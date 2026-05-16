@@ -1,0 +1,48 @@
+{
+  "format": "chrysalis.webir.bundle",
+  "bundleVersion": "1.0.0",
+  "module": {
+    "meta": {
+      "sourceApp": "fixture-db-effect",
+      "createdAt": "1970-01-01T00:00:00.000Z",
+      "chrysalisVersion": "test"
+    },
+    "roots": ["e0"],
+    "nodes": [
+      {
+        "id": "e0",
+        "dialect": "effect",
+        "op": "db.query",
+        "type": { "kind": "array", "element": { "kind": "record", "fields": {} } },
+        "effects": [{ "kind": "db.read", "table": "posts" }],
+        "operands": ["l0"],
+        "attrs": { "kind": "read", "sql": "SELECT 1", "tables": ["posts"] },
+        "origin": { "kind": "php", "file": "pages/q.php", "line": 1, "col": 1 },
+        "provenance": [
+          {
+            "source": "php-ast",
+            "reason": "query",
+            "locator": { "kind": "php", "file": "pages/q.php", "line": 1, "col": 1 }
+          }
+        ]
+      },
+      {
+        "id": "l0",
+        "dialect": "data",
+        "op": "literal",
+        "type": { "kind": "string" },
+        "effects": [],
+        "operands": [],
+        "attrs": { "value": "SELECT 1" },
+        "origin": { "kind": "php", "file": "pages/q.php", "line": 1, "col": 1 },
+        "provenance": [
+          {
+            "source": "php-ast",
+            "reason": "sql literal",
+            "locator": { "kind": "php", "file": "pages/q.php", "line": 1, "col": 1 }
+          }
+        ]
+      }
+    ]
+  }
+}

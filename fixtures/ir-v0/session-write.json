@@ -1,0 +1,129 @@
+{
+  "schemaVersion": "0.1.0",
+  "meta": {
+    "sourceApp": "f-session",
+    "importedFrom": "chrysalis.webir.bundle@1.0.0",
+    "chrysalisVersion": "test",
+    "createdAt": "1970-01-01T00:00:00.000Z"
+  },
+  "roots": [
+    "s0"
+  ],
+  "nodes": [
+    {
+      "id": "s0",
+      "layer": "effect",
+      "op": "session.set",
+      "valueType": {
+        "kind": "void"
+      },
+      "effects": [
+        {
+          "kind": "session.write"
+        }
+      ],
+      "operandIds": [
+        "k0",
+        "v0"
+      ],
+      "attrs": {
+        "origin": {
+          "kind": "php",
+          "file": "s.php",
+          "line": 1,
+          "col": 1
+        }
+      },
+      "provenance": [
+        {
+          "source": "php-ast",
+          "reason": "session",
+          "locator": {
+            "kind": "php",
+            "file": "s.php",
+            "line": 1,
+            "col": 1
+          }
+        }
+      ],
+      "webir": {
+        "dialect": "effect",
+        "op": "session.set",
+        "nodeId": "s0"
+      }
+    },
+    {
+      "id": "k0",
+      "layer": "value",
+      "op": "literal",
+      "valueType": {
+        "kind": "string"
+      },
+      "effects": [],
+      "operandIds": [],
+      "attrs": {
+        "value": "user_id",
+        "origin": {
+          "kind": "php",
+          "file": "s.php",
+          "line": 1,
+          "col": 1
+        }
+      },
+      "provenance": [
+        {
+          "source": "php-ast",
+          "reason": "key",
+          "locator": {
+            "kind": "php",
+            "file": "s.php",
+            "line": 1,
+            "col": 1
+          }
+        }
+      ],
+      "webir": {
+        "dialect": "data",
+        "op": "literal",
+        "nodeId": "k0"
+      }
+    },
+    {
+      "id": "v0",
+      "layer": "value",
+      "op": "literal",
+      "valueType": {
+        "kind": "int"
+      },
+      "effects": [],
+      "operandIds": [],
+      "attrs": {
+        "value": 42,
+        "origin": {
+          "kind": "php",
+          "file": "s.php",
+          "line": 1,
+          "col": 1
+        }
+      },
+      "provenance": [
+        {
+          "source": "php-ast",
+          "reason": "val",
+          "locator": {
+            "kind": "php",
+            "file": "s.php",
+            "line": 1,
+            "col": 1
+          }
+        }
+      ],
+      "webir": {
+        "dialect": "data",
+        "op": "literal",
+        "nodeId": "v0"
+      }
+    }
+  ],
+  "losses": []
+}

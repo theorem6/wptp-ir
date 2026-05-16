@@ -1,0 +1,27 @@
+{
+  "schemaVersion": "0.1.0",
+  "meta": {
+    "sourceApp": "fixture-unsupported",
+    "importedFrom": "chrysalis.webir.bundle@1.0.0",
+    "chrysalisVersion": "test",
+    "createdAt": "1970-01-01T00:00:00.000Z"
+  },
+  "roots": [],
+  "nodes": [],
+  "losses": [
+    {
+      "webirNodeId": "x0",
+      "dialect": "future.vendor",
+      "op": "widget",
+      "category": "unsupported-dialect",
+      "reason": "Dialect future.vendor is not in the v0 import subset"
+    },
+    {
+      "webirNodeId": "x0",
+      "dialect": "future.vendor",
+      "op": "widget",
+      "category": "other",
+      "reason": "Route root was not imported (loss or unsupported subgraph)"
+    }
+  ]
+}

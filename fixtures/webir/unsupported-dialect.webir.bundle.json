@@ -1,0 +1,31 @@
+{
+  "format": "chrysalis.webir.bundle",
+  "bundleVersion": "1.0.0",
+  "module": {
+    "meta": {
+      "sourceApp": "fixture-unsupported",
+      "createdAt": "1970-01-01T00:00:00.000Z",
+      "chrysalisVersion": "test"
+    },
+    "roots": ["x0"],
+    "nodes": [
+      {
+        "id": "x0",
+        "dialect": "future.vendor",
+        "op": "widget",
+        "type": { "kind": "unknown" },
+        "effects": [],
+        "operands": [],
+        "attrs": {},
+        "origin": { "kind": "synthetic", "reason": "test" },
+        "provenance": [
+          {
+            "source": "hand-authored",
+            "reason": "future dialect",
+            "locator": { "kind": "synthetic", "reason": "test" }
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,125 @@
+{
+  "schemaVersion": "0.1.0",
+  "meta": {
+    "sourceApp": "f-add",
+    "importedFrom": "chrysalis.webir.bundle@1.0.0",
+    "chrysalisVersion": "test",
+    "createdAt": "1970-01-01T00:00:00.000Z"
+  },
+  "roots": [
+    "n2"
+  ],
+  "nodes": [
+    {
+      "id": "n0",
+      "layer": "value",
+      "op": "literal",
+      "valueType": {
+        "kind": "int"
+      },
+      "effects": [],
+      "operandIds": [],
+      "attrs": {
+        "value": 1,
+        "origin": {
+          "kind": "php",
+          "file": "a.php",
+          "line": 1,
+          "col": 1
+        }
+      },
+      "provenance": [
+        {
+          "source": "php-ast",
+          "reason": "1",
+          "locator": {
+            "kind": "php",
+            "file": "a.php",
+            "line": 1,
+            "col": 1
+          }
+        }
+      ],
+      "webir": {
+        "dialect": "data",
+        "op": "literal",
+        "nodeId": "n0"
+      }
+    },
+    {
+      "id": "n1",
+      "layer": "value",
+      "op": "literal",
+      "valueType": {
+        "kind": "int"
+      },
+      "effects": [],
+      "operandIds": [],
+      "attrs": {
+        "value": 2,
+        "origin": {
+          "kind": "php",
+          "file": "a.php",
+          "line": 1,
+          "col": 5
+        }
+      },
+      "provenance": [
+        {
+          "source": "php-ast",
+          "reason": "2",
+          "locator": {
+            "kind": "php",
+            "file": "a.php",
+            "line": 1,
+            "col": 5
+          }
+        }
+      ],
+      "webir": {
+        "dialect": "data",
+        "op": "literal",
+        "nodeId": "n1"
+      }
+    },
+    {
+      "id": "n2",
+      "layer": "value",
+      "op": "add",
+      "valueType": {
+        "kind": "int"
+      },
+      "effects": [],
+      "operandIds": [
+        "n0",
+        "n1"
+      ],
+      "attrs": {
+        "origin": {
+          "kind": "php",
+          "file": "a.php",
+          "line": 1,
+          "col": 3
+        }
+      },
+      "provenance": [
+        {
+          "source": "php-ast",
+          "reason": "add",
+          "locator": {
+            "kind": "php",
+            "file": "a.php",
+            "line": 1,
+            "col": 3
+          }
+        }
+      ],
+      "webir": {
+        "dialect": "data",
+        "op": "add",
+        "nodeId": "n2"
+      }
+    }
+  ],
+  "losses": []
+}

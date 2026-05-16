@@ -1,0 +1,22 @@
+{
+  "name": "@wptp/ir",
+  "version": "0.1.0",
+  "description": "Neutral IR hub v0 for the Web Platform Translation Program",
+  "type": "module",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/theorem6/wptp-ir.git"
+  },
+  "scripts": {
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit",
+    "write-goldens": "tsx scripts/write-import-goldens.mjs"
+  },
+  "devDependencies": {
+    "@types/node": "^20.12.0",
+    "typescript": "^5.4.5",
+    "tsx": "^4.22.0",
+    "vitest": "^3.2.4"
+  }
+}

@@ -1,0 +1,93 @@
+{
+  "schemaVersion": "0.1.0",
+  "meta": {
+    "sourceApp": "f-http",
+    "importedFrom": "chrysalis.webir.bundle@1.0.0",
+    "chrysalisVersion": "test",
+    "createdAt": "1970-01-01T00:00:00.000Z"
+  },
+  "roots": [
+    "h0"
+  ],
+  "nodes": [
+    {
+      "id": "h0",
+      "layer": "effect",
+      "op": "http.fetch",
+      "valueType": {
+        "kind": "string"
+      },
+      "effects": [
+        {
+          "kind": "http.fetch",
+          "host": "api.example.com"
+        }
+      ],
+      "operandIds": [
+        "u0"
+      ],
+      "attrs": {
+        "origin": {
+          "kind": "php",
+          "file": "h.php",
+          "line": 1,
+          "col": 1
+        }
+      },
+      "provenance": [
+        {
+          "source": "php-ast",
+          "reason": "fetch",
+          "locator": {
+            "kind": "php",
+            "file": "h.php",
+            "line": 1,
+            "col": 1
+          }
+        }
+      ],
+      "webir": {
+        "dialect": "effect",
+        "op": "http.fetch",
+        "nodeId": "h0"
+      }
+    },
+    {
+      "id": "u0",
+      "layer": "value",
+      "op": "literal",
+      "valueType": {
+        "kind": "string"
+      },
+      "effects": [],
+      "operandIds": [],
+      "attrs": {
+        "value": "https://api.example.com/v1",
+        "origin": {
+          "kind": "php",
+          "file": "h.php",
+          "line": 1,
+          "col": 1
+        }
+      },
+      "provenance": [
+        {
+          "source": "php-ast",
+          "reason": "url",
+          "locator": {
+            "kind": "php",
+            "file": "h.php",
+            "line": 1,
+            "col": 1
+          }
+        }
+      ],
+      "webir": {
+        "dialect": "data",
+        "op": "literal",
+        "nodeId": "u0"
+      }
+    }
+  ],
+  "losses": []
+}

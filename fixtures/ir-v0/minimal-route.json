@@ -1,0 +1,129 @@
+{
+  "schemaVersion": "0.1.0",
+  "meta": {
+    "sourceApp": "fixture-minimal-route",
+    "importedFrom": "chrysalis.webir.bundle@1.0.0",
+    "chrysalisVersion": "test",
+    "createdAt": "1970-01-01T00:00:00.000Z"
+  },
+  "roots": [
+    "r0"
+  ],
+  "nodes": [
+    {
+      "id": "r0",
+      "layer": "request",
+      "op": "route",
+      "valueType": {
+        "kind": "void"
+      },
+      "effects": [],
+      "operandIds": [
+        "h0"
+      ],
+      "attrs": {
+        "method": "GET",
+        "path": "/health",
+        "origin": {
+          "kind": "php",
+          "file": "pages/health.php",
+          "line": 1,
+          "col": 1
+        }
+      },
+      "provenance": [
+        {
+          "source": "php-ast",
+          "reason": "route",
+          "locator": {
+            "kind": "php",
+            "file": "pages/health.php",
+            "line": 1,
+            "col": 1
+          }
+        }
+      ],
+      "webir": {
+        "dialect": "web.request",
+        "op": "route",
+        "nodeId": "r0"
+      }
+    },
+    {
+      "id": "h0",
+      "layer": "request",
+      "op": "handler",
+      "valueType": {
+        "kind": "named",
+        "name": "Response"
+      },
+      "effects": [],
+      "operandIds": [
+        "b0"
+      ],
+      "attrs": {
+        "name": "health",
+        "origin": {
+          "kind": "php",
+          "file": "pages/health.php",
+          "line": 2,
+          "col": 1
+        }
+      },
+      "provenance": [
+        {
+          "source": "php-ast",
+          "reason": "handler",
+          "locator": {
+            "kind": "php",
+            "file": "pages/health.php",
+            "line": 2,
+            "col": 1
+          }
+        }
+      ],
+      "webir": {
+        "dialect": "web.request",
+        "op": "handler",
+        "nodeId": "h0"
+      }
+    },
+    {
+      "id": "b0",
+      "layer": "value",
+      "op": "literal",
+      "valueType": {
+        "kind": "string"
+      },
+      "effects": [],
+      "operandIds": [],
+      "attrs": {
+        "value": "ok",
+        "origin": {
+          "kind": "php",
+          "file": "pages/health.php",
+          "line": 3,
+          "col": 1
+        }
+      },
+      "provenance": [
+        {
+          "source": "php-ast",
+          "reason": "literal body",
+          "locator": {
+            "kind": "php",
+            "file": "pages/health.php",
+            "line": 3,
+            "col": 1
+          }
+        }
+      ],
+      "webir": {
+        "dialect": "data",
+        "op": "literal",
+        "nodeId": "b0"
+      }
+    }
+  ],
+  "losses": []
+}

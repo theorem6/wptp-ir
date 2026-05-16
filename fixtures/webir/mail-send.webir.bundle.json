@@ -1,0 +1,21 @@
+{
+  "format": "chrysalis.webir.bundle",
+  "bundleVersion": "1.0.0",
+  "module": {
+    "meta": { "sourceApp": "f-mail", "createdAt": "1970-01-01T00:00:00.000Z", "chrysalisVersion": "test" },
+    "roots": ["m0"],
+    "nodes": [
+      {
+        "id": "m0",
+        "dialect": "effect",
+        "op": "mail.send",
+        "type": { "kind": "void" },
+        "effects": [{ "kind": "mail.send" }],
+        "operands": [],
+        "attrs": { "to": "user@example.com" },
+        "origin": { "kind": "php", "file": "m.php", "line": 1, "col": 1 },
+        "provenance": [{ "source": "php-ast", "reason": "mail", "locator": { "kind": "php", "file": "m.php", "line": 1, "col": 1 } }]
+      }
+    ]
+  }
+}

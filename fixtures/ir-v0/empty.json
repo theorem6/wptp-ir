@@ -1,0 +1,10 @@
+{
+  "schemaVersion": "0.1.0",
+  "meta": {
+    "sourceApp": "fixture-empty",
+    "importedFrom": "manual"
+  },
+  "roots": [],
+  "nodes": [],
+  "losses": []
+}

@@ -1,0 +1,24 @@
+{
+  "format": "chrysalis.webir.bundle",
+  "bundleVersion": "1.0.0",
+  "module": {
+    "meta": { "sourceApp": "f-hole", "createdAt": "1970-01-01T00:00:00.000Z", "chrysalisVersion": "test" },
+    "roots": ["hole0"],
+    "nodes": [
+      {
+        "id": "hole0",
+        "dialect": "data",
+        "op": "hole",
+        "type": {
+          "kind": "hole",
+          "contract": { "input": { "kind": "unknown" }, "output": { "kind": "unknown" } }
+        },
+        "effects": [],
+        "operands": [],
+        "attrs": { "reason": "legacy:unsupported_call" },
+        "origin": { "kind": "php", "file": "x.php", "line": 1, "col": 1 },
+        "provenance": [{ "source": "php-ast", "reason": "hole", "locator": { "kind": "php", "file": "x.php", "line": 1, "col": 1 } }]
+      }
+    ]
+  }
+}

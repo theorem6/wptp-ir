@@ -1,0 +1,102 @@
+{
+  "schemaVersion": "0.1.0",
+  "meta": {
+    "sourceApp": "fixture-db-effect",
+    "importedFrom": "chrysalis.webir.bundle@1.0.0",
+    "chrysalisVersion": "test",
+    "createdAt": "1970-01-01T00:00:00.000Z"
+  },
+  "roots": [
+    "e0"
+  ],
+  "nodes": [
+    {
+      "id": "e0",
+      "layer": "effect",
+      "op": "db.query",
+      "valueType": {
+        "kind": "array",
+        "element": {
+          "kind": "record",
+          "fields": {}
+        }
+      },
+      "effects": [
+        {
+          "kind": "db.read",
+          "table": "posts"
+        }
+      ],
+      "operandIds": [
+        "l0"
+      ],
+      "attrs": {
+        "kind": "read",
+        "sql": "SELECT 1",
+        "tables": [
+          "posts"
+        ],
+        "origin": {
+          "kind": "php",
+          "file": "pages/q.php",
+          "line": 1,
+          "col": 1
+        }
+      },
+      "provenance": [
+        {
+          "source": "php-ast",
+          "reason": "query",
+          "locator": {
+            "kind": "php",
+            "file": "pages/q.php",
+            "line": 1,
+            "col": 1
+          }
+        }
+      ],
+      "webir": {
+        "dialect": "effect",
+        "op": "db.query",
+        "nodeId": "e0"
+      }
+    },
+    {
+      "id": "l0",
+      "layer": "value",
+      "op": "literal",
+      "valueType": {
+        "kind": "string"
+      },
+      "effects": [],
+      "operandIds": [],
+      "attrs": {
+        "value": "SELECT 1",
+        "origin": {
+          "kind": "php",
+          "file": "pages/q.php",
+          "line": 1,
+          "col": 1
+        }
+      },
+      "provenance": [
+        {
+          "source": "php-ast",
+          "reason": "sql literal",
+          "locator": {
+            "kind": "php",
+            "file": "pages/q.php",
+            "line": 1,
+            "col": 1
+          }
+        }
+      ],
+      "webir": {
+        "dialect": "data",
+        "op": "literal",
+        "nodeId": "l0"
+      }
+    }
+  ],
+  "losses": []
+}

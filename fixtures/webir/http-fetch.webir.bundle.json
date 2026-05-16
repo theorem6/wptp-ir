@@ -1,0 +1,32 @@
+{
+  "format": "chrysalis.webir.bundle",
+  "bundleVersion": "1.0.0",
+  "module": {
+    "meta": { "sourceApp": "f-http", "createdAt": "1970-01-01T00:00:00.000Z", "chrysalisVersion": "test" },
+    "roots": ["h0"],
+    "nodes": [
+      {
+        "id": "h0",
+        "dialect": "effect",
+        "op": "http.fetch",
+        "type": { "kind": "string" },
+        "effects": [{ "kind": "http.fetch", "host": "api.example.com" }],
+        "operands": ["u0"],
+        "attrs": {},
+        "origin": { "kind": "php", "file": "h.php", "line": 1, "col": 1 },
+        "provenance": [{ "source": "php-ast", "reason": "fetch", "locator": { "kind": "php", "file": "h.php", "line": 1, "col": 1 } }]
+      },
+      {
+        "id": "u0",
+        "dialect": "data",
+        "op": "literal",
+        "type": { "kind": "string" },
+        "effects": [],
+        "operands": [],
+        "attrs": { "value": "https://api.example.com/v1" },
+        "origin": { "kind": "php", "file": "h.php", "line": 1, "col": 1 },
+        "provenance": [{ "source": "php-ast", "reason": "url", "locator": { "kind": "php", "file": "h.php", "line": 1, "col": 1 } }]
+      }
+    ]
+  }
+}

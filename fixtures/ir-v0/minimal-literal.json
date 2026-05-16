@@ -1,0 +1,51 @@
+{
+  "schemaVersion": "0.1.0",
+  "meta": {
+    "sourceApp": "fixture-minimal-literal",
+    "importedFrom": "chrysalis.webir.bundle@1.0.0",
+    "chrysalisVersion": "test",
+    "createdAt": "1970-01-01T00:00:00.000Z"
+  },
+  "roots": [
+    "n0"
+  ],
+  "nodes": [
+    {
+      "id": "n0",
+      "layer": "value",
+      "op": "literal",
+      "valueType": {
+        "kind": "string"
+      },
+      "effects": [],
+      "operandIds": [],
+      "attrs": {
+        "value": "hello",
+        "origin": {
+          "kind": "php",
+          "file": "pages/index.php",
+          "line": 1,
+          "col": 1
+        }
+      },
+      "provenance": [
+        {
+          "source": "php-ast",
+          "reason": "literal",
+          "locator": {
+            "kind": "php",
+            "file": "pages/index.php",
+            "line": 1,
+            "col": 1
+          }
+        }
+      ],
+      "webir": {
+        "dialect": "data",
+        "op": "literal",
+        "nodeId": "n0"
+      }
+    }
+  ],
+  "losses": []
+}
