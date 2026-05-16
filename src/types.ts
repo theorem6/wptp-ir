@@ -19,6 +19,10 @@ export interface IrNodeV0 {
   readonly attrs: Readonly<Record<string, unknown>>;
   readonly provenance: ReadonlyArray<IrProvenanceRef>;
   readonly webir?: { readonly dialect: string; readonly op: string; readonly nodeId: string };
+  /** OpenAPI adapter lift metadata (bronze). */
+  readonly openapi?: { readonly path: string; readonly method: string };
+  /** Browser HAR adapter lift metadata (bronze). */
+  readonly browser?: { readonly url: string; readonly method: string };
 }
 
 export interface IrLossV0 {
@@ -36,6 +40,7 @@ export interface IrDocumentV0 {
     readonly importedFrom: string;
     readonly chrysalisVersion?: string;
     readonly createdAt?: string;
+    readonly openapiVersion?: string;
   };
   readonly roots: ReadonlyArray<string>;
   readonly nodes: ReadonlyArray<IrNodeV0>;

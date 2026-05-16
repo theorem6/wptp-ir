@@ -1,0 +1,1 @@
+{"version":3,"file":"import-webir-v0.d.ts","sourceRoot":"","sources":["../src/import-webir-v0.ts"],"names":[],"mappings":"AAAA,OAAO,KAAK,EACV,YAAY,EAIZ,aAAa,EACd,MAAM,YAAY,CAAC;AAgEpB,wBAAgB,kBAAkB,CAAC,IAAI,EAAE,OAAO,GAAG,aAAa,CAa/D;AAED,qFAAqF;AACrF,wBAAgB,mBAAmB,CAAC,MAAM,EAAE,aAAa,GAAG,YAAY,CAgDvE;AAED,wBAAgB,qBAAqB,CAAC,IAAI,EAAE,OAAO,GAAG,YAAY,CAEjE"}

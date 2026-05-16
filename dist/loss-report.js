@@ -1,0 +1,51 @@
+export function summarizeLosses(doc) {
+    const byCategory = {};
+    const byDialect = {};
+    for (const loss of doc.losses) {
+        byCategory[loss.category] = (byCategory[loss.category] ?? 0) + 1;
+        byDialect[loss.dialect] = (byDialect[loss.dialect] ?? 0) + 1;
+    }
+    return {
+        totalNodes: doc.nodes.length + doc.losses.length,
+        importedNodes: doc.nodes.length,
+        lossCount: doc.losses.length,
+        byCategory,
+        byDialect,
+    };
+}
+export function formatLossReportMarkdown(doc) {
+    const s = summarizeLosses(doc);
+    const lines = [
+        "# WebIR import loss report",
+        "",
+        `- **Imported nodes:** ${s.importedNodes}`,
+        `- **Losses:** ${s.lossCount}`,
+        `- **Source app:** ${doc.meta.sourceApp}`,
+        `- **Imported from:** ${doc.meta.importedFrom}`,
+        "",
+    ];
+    if (s.lossCount === 0) {
+        lines.push("No losses recorded for this bundle.");
+        return `${lines.join("\n")}\n`;
+    }
+    lines.push("## By category", "");
+    for (const [k, v] of Object.entries(s.byCategory).sort(([a], [b]) => a.localeCompare(b))) {
+        lines.push(`- **${k}:** ${v}`);
+    }
+    lines.push("", "## Losses", "");
+    for (const loss of doc.losses) {
+        lines.push(`- \`${loss.webirNodeId}\` (${loss.dialect}/${loss.op}): ${loss.reason}`);
+    }
+    return `${lines.join("\n")}\n`;
+}
+export function mergeLosses(a, b) {
+    const seen = new Set(a.map((x) => x.webirNodeId));
+    const out = [...a];
+    for (const row of b) {
+        if (seen.has(row.webirNodeId))
+            continue;
+        seen.add(row.webirNodeId);
+        out.push(row);
+    }
+    return out;
+}
