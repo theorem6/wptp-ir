@@ -1,6 +1,6 @@
 {
   "name": "@wptp/ir",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Neutral IR hub v0 for the Web Platform Translation Program",
   "type": "module",
   "license": "MIT",

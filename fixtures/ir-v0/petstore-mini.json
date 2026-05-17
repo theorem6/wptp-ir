@@ -1,0 +1,81 @@
+{
+  "schemaVersion": "0.1.0",
+  "meta": {
+    "sourceApp": "petstore-mini",
+    "importedFrom": "openapi@3",
+    "openapiVersion": "3.0.3"
+  },
+  "roots": ["route-0", "route-1", "route-2"],
+  "nodes": [
+    {
+      "id": "route-0",
+      "layer": "request",
+      "op": "route",
+      "valueType": { "kind": "void" },
+      "effects": [],
+      "operandIds": [],
+      "attrs": {
+        "path": "/pets",
+        "method": "GET",
+        "operationId": "listPets",
+        "summary": "List pets",
+        "responseStatus": 200
+      },
+      "provenance": [
+        {
+          "source": "openapi-contract",
+          "reason": "GET /pets",
+          "locator": { "kind": "openapi", "path": "/pets", "method": "GET" }
+        }
+      ],
+      "openapi": { "path": "/pets", "method": "GET" }
+    },
+    {
+      "id": "route-1",
+      "layer": "request",
+      "op": "route",
+      "valueType": { "kind": "void" },
+      "effects": [],
+      "operandIds": [],
+      "attrs": {
+        "path": "/pets",
+        "method": "POST",
+        "operationId": "createPet",
+        "summary": "Create pet",
+        "responseStatus": 201
+      },
+      "provenance": [
+        {
+          "source": "openapi-contract",
+          "reason": "POST /pets",
+          "locator": { "kind": "openapi", "path": "/pets", "method": "POST" }
+        }
+      ],
+      "openapi": { "path": "/pets", "method": "POST" }
+    },
+    {
+      "id": "route-2",
+      "layer": "request",
+      "op": "route",
+      "valueType": { "kind": "void" },
+      "effects": [],
+      "operandIds": [],
+      "attrs": {
+        "path": "/pets/{id}",
+        "method": "GET",
+        "operationId": "getPet",
+        "summary": "Get pet by id",
+        "responseStatus": 200
+      },
+      "provenance": [
+        {
+          "source": "openapi-contract",
+          "reason": "GET /pets/{id}",
+          "locator": { "kind": "openapi", "path": "/pets/{id}", "method": "GET" }
+        }
+      ],
+      "openapi": { "path": "/pets/{id}", "method": "GET" }
+    }
+  ],
+  "losses": []
+}
