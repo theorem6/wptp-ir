@@ -1,5 +1,7 @@
 # wptp-ir
 
+**Program status (2026-05-19):** WPTP **D2 technical exit met** — see [Chrysalis `docs/WPTP-D2-EXIT-REPORT.md`](https://github.com/theorem6/chrysalis/blob/main/docs/WPTP-D2-EXIT-REPORT.md). Package **`@wptp/ir@v0.1.3`**; Chrysalis CI **`webir-bundle-to-wptp-ir`** imports exported tiny-blog bundles with **zero losses**.
+
 ## Purpose
 
 **Neutral intermediate representation (IR) hub** for the [Web Platform Translation Program](https://github.com/theorem6/chrysalis/blob/main/docs/MASTER-PROGRAM.md) (WPTP). This repository owns **IR schema v0**, **validators**, **conformance fixtures**, and the **Chrysalis WebIR import** path. It does not replace [Chrysalis](https://github.com/theorem6/chrysalis) (`@chrysalis/webir`); it **imports** from it.
